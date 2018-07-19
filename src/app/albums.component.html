@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="block">
+    <div class="search-block">
+      <div [ngClass]="isClicked ? 'search-field' : 'initialized-search'">
+        <input type="text" #name placeholder="Search album"/>
+        <input (click)="get(name.value); isClicked = true" type="submit" value="Go">
+      </div>
+      <div class="albums-container" *ngIf="(albums | async)?.results.length">
+        <div *ngFor="let album of (albums | async)?.results" class="album">
+          <img [src]="album?.artworkUrl100" [alt]="album?.artworkUrl100">
+          <div class="album-desc">
+            <span class="artist-name">{{album?.artistName}}</span>
+            <span style="float: right">{{'$' + album?.collectionPrice}}</span>
+            <div class="additional-info">Genre: {{album?.primaryGenreName}}</div>
+            <div class="additional-info">Track count: {{album?.trackCount}}</div>
+            <div class="additional-info">Country: {{album?.country}}</div>
+            <div class="additional-info">Release date: {{album?.releaseDate | date}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="nothing-found" *ngIf="!(albums | async)?.results.length && isClicked">Nothing found ;(</div>
+    </div>
+  </div>
+</div>

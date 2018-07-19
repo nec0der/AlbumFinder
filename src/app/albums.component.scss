@@ -1,0 +1,109 @@
+.container {
+  width: 100%;
+  height: 100%;
+  padding-top: 5rem;
+  background-image: url("./../assets/images/apple_music_festival_gradient_wallpaper_by_vndesign-daibu0s.jpg");
+
+  .block {
+    margin: 0 auto;
+    height: 80%;
+    width: 80%;
+    box-shadow: 0 0 5px 1px white;
+    overflow: scroll;
+    background-color: white;
+
+    .search-field {
+      margin-top: 1rem;
+    }
+
+    .initialized-search {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    input{
+      padding: 10px;
+      margin: 10px;
+      height: 20px;
+      width: 550px;
+      border: 1px solid #eaeaea;
+      outline:none;
+      display: inline-block;
+    }
+    input:hover{
+      border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;
+    }
+    input:focus{
+      border-color:#4d90fe;
+    }
+
+    input[type="submit"] {
+      border-radius: 2px;
+      background: #f2f2f2;
+      border: 1px solid #f2f2f2;
+      color: #757575;
+      cursor: default;
+      font-size: 14px;
+      font-weight: bold;
+      width: 100px;
+      padding: 0 16px;
+      height:36px;
+    }
+    input[type="submit"]:hover {
+      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+      background: #f8f8f8;
+      border: 1px solid #c6c6c6;
+      color: #222;
+    }
+
+    .albums-container {
+      padding: 10px;
+
+      img {
+        float: left;
+        border: 1px solid #c1b9b9;
+        border-radius: 4px;
+      }
+
+      .album-desc {
+        width: 80%;
+        display: inline-block;
+        margin-left: 1rem;
+      }
+    }
+
+    .search-block {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    .album {
+      transition: all .2s ease-in-out;
+      margin-bottom: 10px;
+      padding: 1rem;
+      height: 7rem;
+      border: 1px solid #eaeaea;
+      border-radius: 3px;
+
+      .artist-name {
+        font-size: 25px;
+      }
+
+      .additional-info {
+        font-size: 13px;
+      }
+    }
+
+    .album:hover {
+      transform: scale(1.05);
+      box-shadow: 0 3px 1px rgba(0,0,0,0.1);
+    }
+
+    .nothing-found {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+}
+

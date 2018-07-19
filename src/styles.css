@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  margin:0; padding:0;
+  background-image: url("./../src/assets/images/apple_music_festival_gradient_wallpaper_by_vndesign-daibu0s.jpg");
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow: auto;
+}
